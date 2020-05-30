@@ -45,17 +45,20 @@ class Card:
         return self.card_strength < other.card_strength
 
 
-    def get_bridge_strength(self, round_suit):
+    def get_bridge_strength(self, round_suit, trump_suit=c.TRUMP_SUIT):
         '''
         Returns card bridge strength for a given round of Bridge.
         Bridge strengths range from 0 to 26:
-            - 0 if self.suit not in [round_suit, c.TRUMP_SUIT]
+            - 0 if self.suit not in [round_suit, trump_suit]
             - 1 to 13: rank_strength if self.suit == round_suit
             - 14 to 26: rank_strength if self.suit == trump.suit
         '''
-        if self.suit not in [round_suit, c.TRUMP_SUIT]:
+        round_suit = round_suit.upper()
+        trump_suit = trump_suit.upper()
+
+        if self.suit not in [round_suit, trump_suit]:
             return 0
         elif self.suit == round_suit:
             return self.rank_strength
-        elif self.suit == c.TRUMP_SUIT:
+        elif self.suit == trump_suit:
             return 13 + self.rank_strength
