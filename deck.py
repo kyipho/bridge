@@ -76,7 +76,7 @@ class Deck(UserList):
         shuffle(self.data)
 
 
-    def deal(self, n, k=None, shuffle=False):
+    def deal(self, n, k=None, shuffle_deck=False):
         '''
         n: number of players to deal to.
         k: number of cards to deal to each player. Default is None, meaning all cards are dealt.
@@ -85,7 +85,7 @@ class Deck(UserList):
         Deal k cards each to n players. Deal all cards in deck if k unspecified.
         Returns a list of n Decks, each of which has k cards.
         '''
-        if shuffle:
+        if shuffle_deck:
             shuffle(self.data)
 
         # if k is not specified, each player gets (num cards in deck / num players) cards

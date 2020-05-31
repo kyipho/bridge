@@ -161,16 +161,16 @@ J♥
 >>> d1_sorted
 [3♥, J♠, A♣, 10♦]
 ```
-`Deck.deal(n, k=None, shuffle=False)`:
+`Deck.deal(n, k=None, shuffle_deck=False)`:
   - n: number of players to deal to.
   - k: number of cards to deal to each player. Default is None i.e. all cards are dealt.
-  - shuffle: whether to shuffle the deck before dealing. Default is False.
+  - shuffle_deck: whether to shuffle the deck before dealing. Default is False.
 
 Returns a list of n Decks, each of which has k cards.
 
 From an unshuffled Deck, deal all cards to 4 players like in a typical Bridge game:
 ```
->>> hands = sorted_full_deck.deal(n=4, k=None, shuffled=True)
+>>> hands = sorted_full_deck.deal(n=4, k=None, shuffle_deck=True)
 >>> for i in range(len(hands)):
 ...     print(f'Hand {i}: {hands[i]}')
 ...
@@ -185,7 +185,7 @@ Create a full Deck, shuffle it, then deal 2 cards each to 7 players:
 >>> d.shuffle()
 >>> d
 [K♠, 4♣, J♣, A♥, 8♣, 3♣, 4♠, K♦, K♥, 9♣, A♣, 3♥, 2♦, J♠, 5♥, 2♥, 6♣, A♠, Q♠, 7♥, 6♠, 7♠, A♦, 10♦, 10♠, 6♦, 5♦, 4♥, J♥, Q♦, 9♠, 3♦, 5♣, 5♠, 8♥, K♣, 4♦, 8♠, 6♥, 10♥, 9♦, 7♣, Q♣, 10♣, 2♣, J♦, 3♠, 7♦, Q♥, 2♠, 8♦, 9♥]
->>> hands = d.deal(n=7, k=2, shuffle=False)
+>>> hands = d.deal(n=7, k=2, shuffle_deck=False)
 >>> hands
 [[K♠, 4♣], [J♣, A♥], [8♣, 3♣], [4♠, K♦], [K♥, 9♣], [A♣, 3♥], [2♦, J♠]]
 >>> len(d)

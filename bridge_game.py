@@ -89,7 +89,7 @@ def play_round(starter_num):
 ROUNDS_PLAYED = 0
 
 # get a list of 4 hands of cards
-HANDS = Deck().deal(n=c.NUM_PLAYERS, shuffled=True)
+HANDS = Deck().deal(n=c.NUM_PLAYERS, shuffle_deck=True)
 
 # list to hold Players
 PLAYERS = []
