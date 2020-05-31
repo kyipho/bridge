@@ -56,7 +56,7 @@ When it is your turn, please choose a card to play.
 Input must be a string of rank, followed by suit. 
 e.g. 'qd' = queen of diamonds, '10s' = 10 of spades.
 
-Cards placed on the pile will be in blue font.
+Cards placed on the pile will be in yellow font.
 
 The trump suit and the player to start the first round are chosen at random.
 """
@@ -82,3 +82,7 @@ def blue(string):
 def green(string):
 	''' Returns the given string in red font '''
 	return f'{Fore.GREEN}{string}{Style.RESET_ALL}'
+
+def yellow(string):
+	''' Returns the given string in red font '''
+	return f'{Fore.YELLOW}{string}{Style.RESET_ALL}'

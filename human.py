@@ -77,6 +77,6 @@ class BridgeHuman(BridgePlayer):
         # remove card from user's hand
         self.hand[card.suit].remove(card)
 
-        print(c.blue(f'\n{self.name} plays {card}'))
+        print(c.yellow(f'\n{self.name} plays {card}'))
 
         return card

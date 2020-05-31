@@ -61,7 +61,7 @@ class BridgeBot(BridgePlayer):
                 random_suit = choice([s for s in self.hand if self.hand[s]])
                 card = self.hand[random_suit].pop(0)
 
-        print(c.blue(f'{self.name} plays {card}'))
+        print(c.yellow(f'{self.name} plays {card}'))
 
         return card
 
